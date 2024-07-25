@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <div class="card" :class="{ flipped }" @click="toggleFlipped">
+    <Annotation v-if="!annotationHidden" />
+    <div class="card" :class="{ flipped }" @click="onClickCard">
       <div class="card__front">
         <div class="card__content front">
           <slot name="front" />
@@ -18,9 +19,23 @@
 <script setup>
 import { ref } from 'vue';
 
-const flipped = ref(false);
+import Annotation from '@/components/Annotation.vue';
 
-const toggleFlipped = () => flipped.value = !flipped.value
+const flipped = ref(false);
+const toggleFlipped = () => flipped.value = !flipped.value;
+
+const annotationHidden = ref(localStorage.getItem('annotationHidden') === 'true');
+const hideAnnotation = () => {
+  annotationHidden.value = true;
+  localStorage.setItem('annotationShown', annotationHidden.value.toString());
+};
+
+const onClickCard = () => {
+  if (!annotationHidden.value) {
+    hideAnnotation();
+  }
+  toggleFlipped();
+};
 </script>
 
 <style scoped lang="scss">
