@@ -2,12 +2,12 @@
   <div class="container">
     <div class="card" :class="{ flipped }" @click="toggleFlipped">
       <div class="card__front">
-        <div class="card__content">
+        <div class="card__content front">
           <slot name="front" />
         </div>
       </div>
       <div class="card__back">
-        <div class="card__content">
+        <div class="card__content back">
           <slot name="back" />
         </div>
       </div>
