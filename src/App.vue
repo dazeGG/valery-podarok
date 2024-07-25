@@ -16,7 +16,17 @@
 </template>
 
 <script setup>
+import { onBeforeMount } from 'vue';
+
 import Card from '@/components/Card.vue';
+
+const DEFAULT_WIDTH = 1200;
+
+const resize = () => document.documentElement.style.fontSize = window.innerWidth / DEFAULT_WIDTH * 10 + 'px';
+
+window.addEventListener('resize', resize);
+
+onBeforeMount(resize)
 </script>
 
 <style scoped lang="scss">
