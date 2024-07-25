@@ -1,4 +1,5 @@
 * {
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -24,14 +25,13 @@ html {
   font-size: 10px;
 }
 
-body {
-  margin: 0;
-}
-
 h1 {
-  margin: 0;
   font-size: 5rem;
   color: var(--color-primary);
+}
+
+p {
+  font-size: 2rem;
 }
 
 #app {
