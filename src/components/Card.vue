@@ -1,5 +1,5 @@
 <template>
-  <h1>PODAROK</h1>
+<div class="card"></div>
 </template>
 
 <script setup>
