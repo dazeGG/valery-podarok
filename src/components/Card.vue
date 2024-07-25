@@ -27,7 +27,7 @@ const toggleFlipped = () => flipped.value = !flipped.value;
 const annotationHidden = ref(localStorage.getItem('annotationHidden') === 'true');
 const hideAnnotation = () => {
   annotationHidden.value = true;
-  localStorage.setItem('annotationShown', annotationHidden.value.toString());
+  localStorage.setItem('annotationHidden', annotationHidden.value.toString());
 };
 
 const onClickCard = () => {
