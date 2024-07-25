@@ -43,6 +43,8 @@ const onClickCard = () => {
   position: relative;
   width: 100rem;
   height: 60rem;
+  max-width: 95vw;
+  max-height: 95vh;
 }
 
 .card {
