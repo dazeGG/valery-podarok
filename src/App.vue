@@ -5,7 +5,7 @@
       <p class="front__text">Желаем счастливой семейной жизни <br /> От всей души Вова и Кирилл</p>
     </template>
     <template #back>
-      <h1 class="back__title">GIFT CARD</h1>
+      <h1 class="back__title">Сертификат</h1>
       <p class="back__text">На разработку лендинга под ключ для Валерия и Любы</p>
       <img class="back__naiveui" src="@/assets/img/image%206.png" alt="naiveui" />
       <img class="back__vuejs" src="@/assets/img/image%204.png" alt="vue.js" />
